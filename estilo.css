@@ -1,0 +1,549 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,500&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+
+background-color: black;
+font-family: 'Bricolage Grotesque', sans-serif;
+
+}
+
+a {
+
+  text-decoration: none;
+}
+
+.header {
+  background: #010A26;
+  padding-inline: 16px;
+}
+
+.nav {
+  max-width: 1280px;
+  height: 70px;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+
+  height: 150px;
+  
+}
+
+.nav-list {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-list a {
+  font-size: 18px;
+  color: #fff;
+  padding-block: 16px;
+}
+
+.hero {
+  height: calc(100vh - 70px);
+}
+
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+}
+
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+
+
+#home{
+  height: 90vh;
+  width: 100%;
+  color: rgb(255, 255, 255);
+
+}
+
+#imagem-bg{
+background-image: url(Banco-de-imagens/IMG-20230610-WA0006.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+position: relative;
+height: 90vh;
+z-index: 1;
+}
+
+#imagem-bg::before{
+  content: '';
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 90vh;
+  opacity: 80%;
+  z-index: 1;
+
+}
+
+.espaco{
+  padding: 10vh;
+}
+
+.conteudo{
+
+  display: flex;
+  position: relative;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  font-size: 30px;
+  z-index: 1;
+
+}
+
+.whatsapp{
+
+  display: flex;
+  justify-content: center;
+  background-color: #401201;
+  padding: 10px 50px;
+  width: 10%;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+
+}
+
+#servicos{
+
+  display: flex;
+  flex-direction: column;
+  background-color: #010A26;
+  height: 100vh;
+  width: 100%;
+  color: #ffffff;
+  padding-top: 8rem;
+
+}
+
+.sessao1{
+
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+
+
+}
+
+h3{
+
+  padding-right: 5rem;
+  padding-left: 5rem;
+
+
+}
+
+.gato{
+
+  display: flex;
+  flex-direction: row;
+  background-image: url(Banco-de-imagens/);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  align-content: center;
+  justify-content: center;
+  padding-top: 5rem;
+  font-size: 15px;
+  color: #401201;
+  height: 35vh;
+  width: 100%;
+  background-color: white;
+
+}
+
+.janela{
+
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: right;
+  padding-top: 5rem;
+  font-size: 15px;
+  color: black;
+  height: 35vh;
+  width: 100%;
+  background-color: rgb(202, 202, 202);
+
+}
+
+
+.sacada{
+
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: left;
+  padding-top: 5rem;
+  font-size: 15px;
+  color: black;
+  height: 35vh;
+  width: 100%;
+  background-color: white;
+
+}
+
+.estrutura{
+
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: left;
+  padding-top: 5rem;
+  font-size: 15px;
+  color: black;
+  height: 35vh;
+  width: 100%;
+  background-color: rgb(202, 202, 202);
+
+}
+
+
+#empresa{
+display: flex;
+flex-direction: column;
+background-color: #010A26 ;
+justify-content: center;
+height: 100vh;
+width: 100%;
+color: white;
+padding-top: 3rem;
+text-align: center;
+gap: 90px;
+}
+
+.titulo2{
+
+  padding-top: 5rem;
+
+
+}
+
+
+.logo2{
+
+  height: 200px;
+
+}
+
+
+
+
+
+
+@media (max-width: 750px) {
+
+
+  .header{
+
+    position: fixed;
+    box-shadow:  10px 5px 10px black;
+    width: 95%;
+    z-index: 5;
+  
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 4;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #010A26;
+    clip-path: circle(10px at 90% -15%);
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+
+    pointer-events: none;
+  }
+
+  .nav-list a {
+    font-size: 24px;
+    opacity: 0;
+  }
+
+  .nav-list li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+  }
+
+  .nav-list li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+  }
+
+  .nav-list li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+  }
+
+  /* Estilos ativos */
+
+  .nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+    z-index: 3;
+  }
+
+  .nav.active .nav-list a {
+    opacity: 1;
+  }
+
+  .nav.active .hamburger {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
+
+  .nav.active .hamburger::before {
+    transform: rotate(135deg);
+  }
+
+  .nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+
+  #home{
+    display: flex;
+    box-sizing: border-box;
+    height: 90vh;
+    width: 100%;
+    color: rgb(255, 255, 255);
+  }
+  
+  #imagem-bg{
+  background-image: url(Banco-de-imagens/IMG-20230610-WA0006.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
+  width: 100%;
+  z-index: 1;
+  }
+  
+  #imagem-bg::after{
+    background-color: black;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 70%;
+    z-index: 1;
+  
+  }
+  
+  .conteudo{
+  
+    display: flex;
+    padding-block: 10vh;
+    padding-inline: 3vh;
+    gap: 20px;
+    flex-direction: column;
+    z-index: 2;
+    font-size: 25px;
+  
+  }
+  
+  .whatsapp{
+  
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    background-color: #401201;
+    padding: 10px 80px;
+    width: 10%;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+  
+  }
+
+  #servicos{
+
+    display: flex;
+    flex-direction: column;
+    background-color: #010A26;
+    height: 380vh;
+    width: 100%;
+    color: #ffffff;
+    padding-top: 4rem;
+  
+  }
+  
+  .sessao1{
+  
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+  
+  
+  }
+  
+  h3{
+
+    text-shadow: 2px 1px black;
+  }
+
+  p{
+
+    text-shadow: 2px 1px black;
+
+  }
+  
+  .gato{
+  
+    display: flex;
+    flex-direction: column;
+    background-image: url(Banco-de-imagens/IMG-20220404-WA0004.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    font-size: 15px;
+    color: #ffffff;
+    height: 100vh;
+    width: 100%;
+    
+  }
+
+  .gato.active{
+
+    padding: 16vh;
+  
+  
+  }
+
+
+  .espaco2{
+    padding: 20vh;
+  }
+  
+  .janela{
+  
+    display: flex;
+    flex-direction: column;
+    background-image: url(Banco-de-imagens/IMG-20210722-WA0009.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+  
+  }
+  
+  
+  .sacada{
+
+    display: flex;
+    flex-direction: column;
+    background-image: url(Banco-de-imagens/IMG-20210722-WA0010.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+  
+  }
+
+  .estrutura{
+
+    display: flex;
+    flex-direction: column;
+    background-image: url(Banco-de-imagens/IMG-20220108-WA0005.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+  
+  }
+  
+
+  #empresa{
+    display: flex;
+    flex-direction: column;
+    background-color: #010A26;
+    height: 150vh;
+    width: 100%;
+    color: white;
+    text-align: center;
+    }
+    
+    .logo2{
+    
+      height: 200px;
+    
+    }
+
+    #pe{
+
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: #ffffff;
+      height: 70vh;
+    
+    
+    }
+
+
+  
+  
+}
